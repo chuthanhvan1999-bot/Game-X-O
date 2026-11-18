@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #6741d9;
+    font-size: 30px;
+}
+
+.subtitle {
+    color: #888;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.score-board {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.score {
+    flex: 1;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.x-score {
+    background: #e7f0ff;
+    color: #3978df;
+}
+
+.o-score {
+    background: #ffe8ef;
+    color: #ed5580;
+}
+
+.score h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.status {
+    background: #f3efff;
+    color: #6741d9;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 15px;
+    background: #f1edff;
+    font-size: 55px;
+    font-weight: bold;
+    color: #6741d9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: #e2d9ff;
+    transform: scale(1.04);
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+.cell.x {
+    color: #3978df;
+}
+
+.cell.o {
+    color: #ed5580;
+}
+
+.cell.winner {
+    background: #b7f7d8;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 13px 8px;
+    border: none;
+    border-radius: 12px;
+    background: #6741d9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: #5030b5;
+    transform: translateY(-2px);
+}
+
+.footer {
+    color: #999;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+@media (max-width: 400px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    .cell {
+        font-size: 42px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
